@@ -14,6 +14,7 @@
 
 package com.delfilab.gargall.service.impl;
 
+import com.liferay.portal.kernel.json.JSONFactoryUtil;
 import com.liferay.portal.kernel.util.ArrayUtil;
 import com.liferay.portal.kernel.util.FastDateFormatFactoryUtil;
 import com.liferay.portal.kernel.util.GetterUtil;
@@ -174,6 +175,7 @@ public class GargallServiceImpl extends GargallServiceBaseImpl {
 
 		 List<AssetTag> assetTags=AssetTagServiceUtil.getTags(DLFileEntry.class.getName(),
 				 dlFileEntry.getClassPK());
+		String jsonTags = JSONFactoryUtil.looseSerialize(assetTags);
 		 
 		GargallDLFileEntry gargallDLFileEntry = new GargallDLFileEntry();
 		gargallDLFileEntry.addDynamicElement("uuid", dlFileEntry.getUuid());
@@ -183,7 +185,7 @@ public class GargallServiceImpl extends GargallServiceBaseImpl {
 		gargallDLFileEntry.addDynamicElement("modifiedDate", _format.format(dlFileEntry.getModifiedDate()));
 		gargallDLFileEntry.addDynamicElement("fileEntryId", String.valueOf(dlFileEntry.getFileEntryId()));
 		gargallDLFileEntry.addDynamicElement("folderId", String.valueOf(dlFileEntry.getFolderId()));
-		
+		gargallDLFileEntry.addDynamicElement("tags", jsonTags);
 
 		populateGargallDLFileEntry(gargallDLFileEntry);
 
