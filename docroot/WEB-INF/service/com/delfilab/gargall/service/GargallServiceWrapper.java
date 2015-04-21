@@ -57,12 +57,6 @@ public class GargallServiceWrapper implements GargallService,
 	}
 
 	@Override
-	public java.util.List<com.delfilab.gargall.model.GargallDDLRecord> getGargallDDLRecords(
-		long ddlRecordSetId) throws java.lang.Exception {
-		return _gargallService.getGargallDDLRecords(ddlRecordSetId);
-	}
-
-	@Override
 	public java.util.List<com.delfilab.gargall.model.GargallDLFileEntry> getGargallDLFileEntries(
 		long repositoryId, long folderId, int status, int start, int end)
 		throws java.lang.Exception {

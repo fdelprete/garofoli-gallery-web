@@ -63,11 +63,6 @@ public class GargallServiceUtil {
 		return getService().invokeMethod(name, parameterTypes, arguments);
 	}
 
-	public static java.util.List<com.delfilab.gargall.model.GargallDDLRecord> getGargallDDLRecords(
-		long ddlRecordSetId) throws java.lang.Exception {
-		return getService().getGargallDDLRecords(ddlRecordSetId);
-	}
-
 	public static java.util.List<com.delfilab.gargall.model.GargallDLFileEntry> getGargallDLFileEntries(
 		long repositoryId, long folderId, int status, int start, int end)
 		throws java.lang.Exception {

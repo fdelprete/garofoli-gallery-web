@@ -23,12 +23,10 @@ import com.liferay.portal.kernel.dao.jdbc.SqlUpdateFactoryUtil;
 import com.liferay.portal.kernel.exception.SystemException;
 import com.liferay.portal.kernel.util.InfrastructureUtil;
 import com.liferay.portal.service.BaseServiceImpl;
-import com.liferay.portal.service.persistence.GroupPersistence;
 import com.liferay.portal.service.persistence.UserPersistence;
 
 import com.liferay.portlet.documentlibrary.service.persistence.DLFileEntryPersistence;
-import com.liferay.portlet.dynamicdatalists.service.persistence.DDLRecordSetPersistence;
-import com.liferay.portlet.dynamicdatamapping.service.persistence.DDMStructurePersistence;
+import com.liferay.portlet.documentlibrary.service.persistence.DLFolderPersistence;
 
 import javax.sql.DataSource;
 
@@ -88,62 +86,6 @@ public abstract class GargallServiceBaseImpl extends BaseServiceImpl
 	public void setCounterLocalService(
 		com.liferay.counter.service.CounterLocalService counterLocalService) {
 		this.counterLocalService = counterLocalService;
-	}
-
-	/**
-	 * Returns the group local service.
-	 *
-	 * @return the group local service
-	 */
-	public com.liferay.portal.service.GroupLocalService getGroupLocalService() {
-		return groupLocalService;
-	}
-
-	/**
-	 * Sets the group local service.
-	 *
-	 * @param groupLocalService the group local service
-	 */
-	public void setGroupLocalService(
-		com.liferay.portal.service.GroupLocalService groupLocalService) {
-		this.groupLocalService = groupLocalService;
-	}
-
-	/**
-	 * Returns the group remote service.
-	 *
-	 * @return the group remote service
-	 */
-	public com.liferay.portal.service.GroupService getGroupService() {
-		return groupService;
-	}
-
-	/**
-	 * Sets the group remote service.
-	 *
-	 * @param groupService the group remote service
-	 */
-	public void setGroupService(
-		com.liferay.portal.service.GroupService groupService) {
-		this.groupService = groupService;
-	}
-
-	/**
-	 * Returns the group persistence.
-	 *
-	 * @return the group persistence
-	 */
-	public GroupPersistence getGroupPersistence() {
-		return groupPersistence;
-	}
-
-	/**
-	 * Sets the group persistence.
-	 *
-	 * @param groupPersistence the group persistence
-	 */
-	public void setGroupPersistence(GroupPersistence groupPersistence) {
-		this.groupPersistence = groupPersistence;
 	}
 
 	/**
@@ -279,117 +221,59 @@ public abstract class GargallServiceBaseImpl extends BaseServiceImpl
 	}
 
 	/**
-	 * Returns the d d l record set local service.
+	 * Returns the document library folder local service.
 	 *
-	 * @return the d d l record set local service
+	 * @return the document library folder local service
 	 */
-	public com.liferay.portlet.dynamicdatalists.service.DDLRecordSetLocalService getDDLRecordSetLocalService() {
-		return ddlRecordSetLocalService;
+	public com.liferay.portlet.documentlibrary.service.DLFolderLocalService getDLFolderLocalService() {
+		return dlFolderLocalService;
 	}
 
 	/**
-	 * Sets the d d l record set local service.
+	 * Sets the document library folder local service.
 	 *
-	 * @param ddlRecordSetLocalService the d d l record set local service
+	 * @param dlFolderLocalService the document library folder local service
 	 */
-	public void setDDLRecordSetLocalService(
-		com.liferay.portlet.dynamicdatalists.service.DDLRecordSetLocalService ddlRecordSetLocalService) {
-		this.ddlRecordSetLocalService = ddlRecordSetLocalService;
+	public void setDLFolderLocalService(
+		com.liferay.portlet.documentlibrary.service.DLFolderLocalService dlFolderLocalService) {
+		this.dlFolderLocalService = dlFolderLocalService;
 	}
 
 	/**
-	 * Returns the d d l record set remote service.
+	 * Returns the document library folder remote service.
 	 *
-	 * @return the d d l record set remote service
+	 * @return the document library folder remote service
 	 */
-	public com.liferay.portlet.dynamicdatalists.service.DDLRecordSetService getDDLRecordSetService() {
-		return ddlRecordSetService;
+	public com.liferay.portlet.documentlibrary.service.DLFolderService getDLFolderService() {
+		return dlFolderService;
 	}
 
 	/**
-	 * Sets the d d l record set remote service.
+	 * Sets the document library folder remote service.
 	 *
-	 * @param ddlRecordSetService the d d l record set remote service
+	 * @param dlFolderService the document library folder remote service
 	 */
-	public void setDDLRecordSetService(
-		com.liferay.portlet.dynamicdatalists.service.DDLRecordSetService ddlRecordSetService) {
-		this.ddlRecordSetService = ddlRecordSetService;
+	public void setDLFolderService(
+		com.liferay.portlet.documentlibrary.service.DLFolderService dlFolderService) {
+		this.dlFolderService = dlFolderService;
 	}
 
 	/**
-	 * Returns the d d l record set persistence.
+	 * Returns the document library folder persistence.
 	 *
-	 * @return the d d l record set persistence
+	 * @return the document library folder persistence
 	 */
-	public DDLRecordSetPersistence getDDLRecordSetPersistence() {
-		return ddlRecordSetPersistence;
+	public DLFolderPersistence getDLFolderPersistence() {
+		return dlFolderPersistence;
 	}
 
 	/**
-	 * Sets the d d l record set persistence.
+	 * Sets the document library folder persistence.
 	 *
-	 * @param ddlRecordSetPersistence the d d l record set persistence
+	 * @param dlFolderPersistence the document library folder persistence
 	 */
-	public void setDDLRecordSetPersistence(
-		DDLRecordSetPersistence ddlRecordSetPersistence) {
-		this.ddlRecordSetPersistence = ddlRecordSetPersistence;
-	}
-
-	/**
-	 * Returns the d d m structure local service.
-	 *
-	 * @return the d d m structure local service
-	 */
-	public com.liferay.portlet.dynamicdatamapping.service.DDMStructureLocalService getDDMStructureLocalService() {
-		return ddmStructureLocalService;
-	}
-
-	/**
-	 * Sets the d d m structure local service.
-	 *
-	 * @param ddmStructureLocalService the d d m structure local service
-	 */
-	public void setDDMStructureLocalService(
-		com.liferay.portlet.dynamicdatamapping.service.DDMStructureLocalService ddmStructureLocalService) {
-		this.ddmStructureLocalService = ddmStructureLocalService;
-	}
-
-	/**
-	 * Returns the d d m structure remote service.
-	 *
-	 * @return the d d m structure remote service
-	 */
-	public com.liferay.portlet.dynamicdatamapping.service.DDMStructureService getDDMStructureService() {
-		return ddmStructureService;
-	}
-
-	/**
-	 * Sets the d d m structure remote service.
-	 *
-	 * @param ddmStructureService the d d m structure remote service
-	 */
-	public void setDDMStructureService(
-		com.liferay.portlet.dynamicdatamapping.service.DDMStructureService ddmStructureService) {
-		this.ddmStructureService = ddmStructureService;
-	}
-
-	/**
-	 * Returns the d d m structure persistence.
-	 *
-	 * @return the d d m structure persistence
-	 */
-	public DDMStructurePersistence getDDMStructurePersistence() {
-		return ddmStructurePersistence;
-	}
-
-	/**
-	 * Sets the d d m structure persistence.
-	 *
-	 * @param ddmStructurePersistence the d d m structure persistence
-	 */
-	public void setDDMStructurePersistence(
-		DDMStructurePersistence ddmStructurePersistence) {
-		this.ddmStructurePersistence = ddmStructurePersistence;
+	public void setDLFolderPersistence(DLFolderPersistence dlFolderPersistence) {
+		this.dlFolderPersistence = dlFolderPersistence;
 	}
 
 	public void afterPropertiesSet() {
@@ -465,12 +349,6 @@ public abstract class GargallServiceBaseImpl extends BaseServiceImpl
 	protected com.delfilab.gargall.service.GargallService gargallService;
 	@BeanReference(type = com.liferay.counter.service.CounterLocalService.class)
 	protected com.liferay.counter.service.CounterLocalService counterLocalService;
-	@BeanReference(type = com.liferay.portal.service.GroupLocalService.class)
-	protected com.liferay.portal.service.GroupLocalService groupLocalService;
-	@BeanReference(type = com.liferay.portal.service.GroupService.class)
-	protected com.liferay.portal.service.GroupService groupService;
-	@BeanReference(type = GroupPersistence.class)
-	protected GroupPersistence groupPersistence;
 	@BeanReference(type = com.liferay.portal.service.ResourceLocalService.class)
 	protected com.liferay.portal.service.ResourceLocalService resourceLocalService;
 	@BeanReference(type = com.liferay.portal.service.UserLocalService.class)
@@ -485,18 +363,12 @@ public abstract class GargallServiceBaseImpl extends BaseServiceImpl
 	protected com.liferay.portlet.documentlibrary.service.DLFileEntryService dlFileEntryService;
 	@BeanReference(type = DLFileEntryPersistence.class)
 	protected DLFileEntryPersistence dlFileEntryPersistence;
-	@BeanReference(type = com.liferay.portlet.dynamicdatalists.service.DDLRecordSetLocalService.class)
-	protected com.liferay.portlet.dynamicdatalists.service.DDLRecordSetLocalService ddlRecordSetLocalService;
-	@BeanReference(type = com.liferay.portlet.dynamicdatalists.service.DDLRecordSetService.class)
-	protected com.liferay.portlet.dynamicdatalists.service.DDLRecordSetService ddlRecordSetService;
-	@BeanReference(type = DDLRecordSetPersistence.class)
-	protected DDLRecordSetPersistence ddlRecordSetPersistence;
-	@BeanReference(type = com.liferay.portlet.dynamicdatamapping.service.DDMStructureLocalService.class)
-	protected com.liferay.portlet.dynamicdatamapping.service.DDMStructureLocalService ddmStructureLocalService;
-	@BeanReference(type = com.liferay.portlet.dynamicdatamapping.service.DDMStructureService.class)
-	protected com.liferay.portlet.dynamicdatamapping.service.DDMStructureService ddmStructureService;
-	@BeanReference(type = DDMStructurePersistence.class)
-	protected DDMStructurePersistence ddmStructurePersistence;
+	@BeanReference(type = com.liferay.portlet.documentlibrary.service.DLFolderLocalService.class)
+	protected com.liferay.portlet.documentlibrary.service.DLFolderLocalService dlFolderLocalService;
+	@BeanReference(type = com.liferay.portlet.documentlibrary.service.DLFolderService.class)
+	protected com.liferay.portlet.documentlibrary.service.DLFolderService dlFolderService;
+	@BeanReference(type = DLFolderPersistence.class)
+	protected DLFolderPersistence dlFolderPersistence;
 	private String _beanIdentifier;
 	private ClassLoader _classLoader;
 	private GargallServiceClpInvoker _clpInvoker = new GargallServiceClpInvoker();

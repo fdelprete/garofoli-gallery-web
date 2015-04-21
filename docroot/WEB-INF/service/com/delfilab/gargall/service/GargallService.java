@@ -67,11 +67,6 @@ public interface GargallService extends BaseService, InvokableService {
 
 	@com.liferay.portal.security.ac.AccessControlled(guestAccessEnabled = true)
 	@Transactional(propagation = Propagation.SUPPORTS, readOnly = true)
-	public java.util.List<com.delfilab.gargall.model.GargallDDLRecord> getGargallDDLRecords(
-		long ddlRecordSetId) throws java.lang.Exception;
-
-	@com.liferay.portal.security.ac.AccessControlled(guestAccessEnabled = true)
-	@Transactional(propagation = Propagation.SUPPORTS, readOnly = true)
 	public java.util.List<com.delfilab.gargall.model.GargallDLFileEntry> getGargallDLFileEntries(
 		long repositoryId, long folderId, int status, int start, int end)
 		throws java.lang.Exception;

@@ -32,13 +32,9 @@ public class GargallServiceClp implements GargallService {
 
 		_methodParameterTypes1 = new String[] { "java.lang.String" };
 
-		_methodName3 = "getGargallDDLRecords";
+		_methodName3 = "getGargallDLFileEntries";
 
-		_methodParameterTypes3 = new String[] { "long" };
-
-		_methodName4 = "getGargallDLFileEntries";
-
-		_methodParameterTypes4 = new String[] {
+		_methodParameterTypes3 = new String[] {
 				"long", "long", "int", "int", "int"
 			};
 	}
@@ -94,42 +90,14 @@ public class GargallServiceClp implements GargallService {
 	}
 
 	@Override
-	public java.util.List<com.delfilab.gargall.model.GargallDDLRecord> getGargallDDLRecords(
-		long ddlRecordSetId) throws java.lang.Exception {
-		Object returnObj = null;
-
-		try {
-			returnObj = _invokableService.invokeMethod(_methodName3,
-					_methodParameterTypes3, new Object[] { ddlRecordSetId });
-		}
-		catch (Throwable t) {
-			t = ClpSerializer.translateThrowable(t);
-
-			if (t instanceof java.lang.Exception) {
-				throw (java.lang.Exception)t;
-			}
-
-			if (t instanceof RuntimeException) {
-				throw (RuntimeException)t;
-			}
-			else {
-				throw new RuntimeException(t.getClass().getName() +
-					" is not a valid exception");
-			}
-		}
-
-		return (java.util.List<com.delfilab.gargall.model.GargallDDLRecord>)ClpSerializer.translateOutput(returnObj);
-	}
-
-	@Override
 	public java.util.List<com.delfilab.gargall.model.GargallDLFileEntry> getGargallDLFileEntries(
 		long repositoryId, long folderId, int status, int start, int end)
 		throws java.lang.Exception {
 		Object returnObj = null;
 
 		try {
-			returnObj = _invokableService.invokeMethod(_methodName4,
-					_methodParameterTypes4,
+			returnObj = _invokableService.invokeMethod(_methodName3,
+					_methodParameterTypes3,
 					new Object[] { repositoryId, folderId, status, start, end });
 		}
 		catch (Throwable t) {
@@ -158,6 +126,4 @@ public class GargallServiceClp implements GargallService {
 	private String[] _methodParameterTypes1;
 	private String _methodName3;
 	private String[] _methodParameterTypes3;
-	private String _methodName4;
-	private String[] _methodParameterTypes4;
 }

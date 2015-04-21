@@ -51,21 +51,6 @@ import java.rmi.RemoteException;
  * @generated
  */
 public class GargallServiceSoap {
-	public static com.delfilab.gargall.model.GargallDDLRecord[] getGargallDDLRecords(
-		long ddlRecordSetId) throws RemoteException {
-		try {
-			java.util.List<com.delfilab.gargall.model.GargallDDLRecord> returnValue =
-				GargallServiceUtil.getGargallDDLRecords(ddlRecordSetId);
-
-			return returnValue.toArray(new com.delfilab.gargall.model.GargallDDLRecord[returnValue.size()]);
-		}
-		catch (Exception e) {
-			_log.error(e, e);
-
-			throw new RemoteException(e.getMessage());
-		}
-	}
-
 	public static com.delfilab.gargall.model.GargallDLFileEntry[] getGargallDLFileEntries(
 		long repositoryId, long folderId, int status, int start, int end)
 		throws RemoteException {
