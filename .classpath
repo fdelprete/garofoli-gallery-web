@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry excluding="**/.svn/**|.svn/" kind="src" path="docroot/WEB-INF/src"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="lib" path="C:/liferay62ga4/liferay-portal-6.2-ce-ga4/tomcat-7.0.42/lib/ext/activation.jar"/>
+	<classpathentry kind="lib" path="C:/liferay62ga4/liferay-portal-6.2-ce-ga4/tomcat-7.0.42/lib/annotations-api.jar"/>
+	<classpathentry kind="lib" path="C:/liferay62ga4/liferay-portal-6.2-ce-ga4/tomcat-7.0.42/lib/jsp-api.jar"/>
+	<classpathentry kind="lib" path="C:/liferay62ga4/liferay-portal-6.2-ce-ga4/tomcat-7.0.42/lib/ext/mail.jar"/>
+	<classpathentry kind="lib" path="C:/liferay62ga4/liferay-portal-6.2-ce-ga4/tomcat-7.0.42/lib/servlet-api.jar"/>
+	<classpathentry kind="lib" path="C:/liferay62ga4/liferay-portal-6.2-ce-ga4/tomcat-7.0.42/lib/ext/portlet.jar"/>
+	<classpathentry kind="lib" path="C:/liferay62ga4/liferay-portal-6.2-ce-ga4/tomcat-7.0.42/webapps/ROOT/WEB-INF/lib/commons-logging.jar"/>
+	<classpathentry kind="lib" path="C:/liferay62ga4/liferay-portal-6.2-ce-ga4/tomcat-7.0.42/webapps/ROOT/WEB-INF/lib/log4j.jar"/>
+	<classpathentry kind="lib" path="C:/liferay62ga4/liferay-portal-6.2-ce-ga4/tomcat-7.0.42/lib/ext/portal-service.jar"/>
+	<classpathentry kind="lib" path="C:/liferay62ga4/liferay-portal-6.2-ce-ga4/tomcat-7.0.42/webapps/ROOT/WEB-INF/lib/util-bridges.jar"/>
+	<classpathentry kind="lib" path="C:/liferay62ga4/liferay-portal-6.2-ce-ga4/tomcat-7.0.42/webapps/ROOT/WEB-INF/lib/util-java.jar"/>
+	<classpathentry kind="lib" path="C:/liferay62ga4/liferay-portal-6.2-ce-ga4/tomcat-7.0.42/webapps/ROOT/WEB-INF/lib/util-taglib.jar"/>
+	<classpathentry kind="con" path="org.eclipse.jst.server.core.container/com.liferay.ide.eclipse.server.tomcat.runtimeClasspathProvider/Liferay v6.2 CE (Tomcat 7)">
+		<attributes>
+			<attribute name="owner.project.facets" value="jst.web"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="con" path="org.eclipse.jst.j2ee.internal.web.container"/>
+	<classpathentry kind="con" path="org.eclipse.jst.j2ee.internal.module.container"/>
+	<classpathentry kind="con" path="com.liferay.ide.eclipse.server.plugin.container/web">
+		<attributes>
+			<attribute name="org.eclipse.jst.component.nondependency" value=""/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="output" path="docroot/WEB-INF/classes"/>
+</classpath>
